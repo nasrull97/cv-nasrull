@@ -163,8 +163,8 @@
 
 .ability-card {
   background-color: var(--secondary);
-  border-radius: 1rem;
-  padding: 1rem;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
   display: flex;
   align-items: flex-start;
   gap: 1rem;
