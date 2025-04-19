@@ -4,6 +4,7 @@
   --secondary: #314355;
   --light: #f2f2f2;
   --dark: #2c3e50;
+  --blue: #0c3762;
 }
 
 #spinner {
@@ -230,7 +231,40 @@
   color: var(--light);
 }
 
-/* Strart  service-item */
+/* End  service-item */
+
+/* Start cert-item */
+.card {
+  background-color: var(--secondary);
+  padding: 2rem;
+  text-align: center;
+}
+
+.image-wrapper {
+  width: 155px;
+  height: 115px;
+  margin: 0 auto 1rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ini penting agar gambar tidak keluar */
+}
+
+.certificate-image {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover .certificate-image {
+  transform: scale(2); /* zoom in tapi tetap di dalam wrapper */
+}
+
+/* End cert-item */
+
 ul {
   list-style-type: disc; /* atau square, circle */
   padding-left: 1.5rem;
