@@ -90,32 +90,4 @@
     $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
     return false;
   });
-
-  // Circular Progress
-  $(".circular-progress").each(function () {
-    const value = $(this).data("progress");
-    const color = $(this).data("color") || $(this).data("color") || "#00bfff"; // Warna dflt
-    const circle = $(this).find(".progress")[0];
-    const radius = circle.r.baseVal.value;
-    const circumference = 2 * Math.PI * radius;
-
-    circle.style.strokeDasharray = circumference;
-    circle.style.strokeDashoffset = circumference;
-    circle.style.stroke = color;
-
-    let currentProgress = 0;
-    const speed = 1;
-
-    function animateProgress() {
-      const offset = circumference - (currentProgress / 100) * circumference;
-      circle.style.strokeDashoffset = offset;
-
-      if (currentProgress < value) {
-        currentProgress++;
-        requestAnimationFrame(animateProgress);
-      }
-    }
-
-    animateProgress();
-  });
 })(jQuery);
